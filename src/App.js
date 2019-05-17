@@ -44,13 +44,23 @@ class App extends React.Component {
               </Button>
             )}
             {isAuthenticated() && (
-              <Button
-                bsStyle="primary"
-                className="btn-margin"
-                onClick={this.goTo.bind(this, "home")}
-              >
-                Home
-              </Button>
+              <>
+                <Button
+                  bsStyle="primary"
+                  className="btn-margin"
+                  onClick={this.goTo.bind(this, "home")}
+                >
+                  Home
+                </Button>
+                <Button
+                  id="qsLogoutBtn"
+                  bsStyle="primary"
+                  className="btn-margin"
+                  onClick={this.logout.bind(this)}
+                >
+                  Log Out
+                </Button>
+              </>
             )}
           </Navbar.Header>
         </Navbar>
